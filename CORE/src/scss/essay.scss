@@ -1,0 +1,146 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	padding-top: 3rem;
+}
+
+html:before {
+	$blur: 5px;
+
+	content: ' ';
+	position: fixed;
+	top: -$blur * 2;
+	right: -$blur * 2;
+	bottom: -$blur * 2;
+	left: -$blur * 2;
+	z-index: -1;
+
+	display: block;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.3)), url('/images/main-screen.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: calc(100% + #{$blur * 4});
+	height: calc(100% + #{$blur * 4});
+
+	filter: blur($blur);
+}
+
+.paper {
+	max-width: 60.5rem;
+	margin: 0 auto 6rem;
+	padding: 1rem;
+
+	text-align: center;
+
+	background: #fff;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+	.return {
+		display: inline-block;
+		margin: 2rem 0;
+		color: mix(#fff, #292b2c, 25%);
+		text-align: center;
+	}
+
+	.essay {
+		margin-bottom: 2rem;
+
+		> * {
+			text-align: left;
+		}
+
+		.header {
+			margin-bottom: 2.5rem;
+
+			p {
+				margin-bottom: 0;
+				font-size: 1.25rem;
+			}
+		}
+
+		.title {
+			margin-bottom: 5rem;
+
+			h1 {
+				font-size: 4rem;
+				text-align: center;
+			}
+
+			h3 {
+				text-align: center;
+			}
+		}
+
+		.paragraph {
+			text-indent: 2rem;
+		}
+
+		.image {
+			margin: 2rem 0;
+
+			img {
+				max-width: 100%;
+				display: block;
+				margin: 0 auto;
+			}
+
+			.description {
+				font-style: italic;
+			}
+		}
+	}
+
+	.bibliography {
+		text-align: left;
+
+		h3 {
+			text-align: center;
+		}
+
+		p {
+			padding-left: 2rem;
+			text-indent: -2rem;
+		}
+	}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.paper {
+		padding: 5rem;
+
+		.essay {
+			.title h1 {
+				font-size: 5.5rem;
+			}
+
+			.paragraph {
+				font-size: 1.5rem;
+				text-indent: 4rem;
+			}
+		}
+
+		.bibliography p {
+			padding-left: 4rem;
+			text-indent: -4rem;
+		}
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}

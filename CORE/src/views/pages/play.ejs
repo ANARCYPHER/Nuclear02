@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include('../partials/header', { title: 'Nuclear Energy Simulator 2017 - Play' }) %>
+		<link rel="stylesheet" href="css/play.css">
+	</head>
+	<body>
+		<div id="game">
+			<div class="game-overlay">
+				<div class="overlay-prompt tutorial">
+					<h1>Would you like to take the tutorial?</h1>
+					<div class="overlay-response">
+						<button class="tutorial-yes btn btn-block btn-primary">Sure!</button>
+						<button class="tutorial-no btn btn-block btn-outline-danger">This Isn't My First Rodeo</button>
+					</div>
+				</div>
+				<div class="overlay-prompt win">
+					<h1>You won! You converted your country to 100% nuclear! Would you like to keep playing?</h1>
+					<div class="overlay-response">
+						<button class="win-keepplaying btn btn-block btn-success">Keep Playing</button>
+						<button class="win-done btn btn-block btn-outline-primary">My Work Here Is Done</button>
+					</div>
+				</div>
+			</div>
+			<div class="game-content">
+				<div class="game-buy">
+					<h3>Build a Reactor</h3>
+					<p>Simply drag and drop onto the map</p>
+					<div class="buy-reactors"></div>
+				</div>
+				<div class="game-view">
+					<div class="fun-facts"></div>
+				</div>
+			</div>
+			<div class="game-status">
+				<div class="status-group">
+					<p class="status-item status-time">Time <span>12:00</span></p>
+				</div>
+				<div class="status-group">
+					<p class="status-item status-money"><strong>$<span>0</span></strong></p>
+					<p class="status-item status-moneygained"><strong><span>0</span></strong> <small>per hour</small></p>
+				</div>
+				<div class="status-group">
+					<p class="status-item status-favor"><strong><span>0</span>%</strong> <small>Average Nuclear Support</small></p>
+					<p class="status-item status-generated"><strong><span>0</span></strong> <small>Megawatts per hour</small></p>
+					<p class="status-item status-percentage"><strong><span>0</span>%</strong> <small>Converted to Nuclear</small></p>
+				</div>
+			</div>
+		</div>
+
+		<%- include('../partials/footer') %>
+		<script src="js/nuclear.js"></script>
+	</body>
+</html>
